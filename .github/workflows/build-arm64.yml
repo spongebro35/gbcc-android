@@ -54,6 +54,9 @@ jobs:
             KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: ./gradlew assembleRelease
 
+      - name: Install Android Build Tool 29.0.3
+        run: echo "y" | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "build-tools;29.0.3"
+      
       # 7. Sign the APK (Standard Android signing)
       - name: Sign APK
         uses: r0adkll/sign-android-release@v1
