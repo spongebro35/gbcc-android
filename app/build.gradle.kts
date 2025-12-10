@@ -11,6 +11,7 @@ base {
 
 android {
 	compileSdk = 33
+	buildToolsVersion = "34.0.0"
 	defaultConfig {
 		applicationId = "com.philj56.gbcc"
 		minSdk = 21
